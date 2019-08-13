@@ -16,6 +16,10 @@ class Painting
     @@all
   end
 
+  def self.total_price
+    self.all.map{|painting| painting.price}.reduce(:+)
+  end
+
   
 
 end

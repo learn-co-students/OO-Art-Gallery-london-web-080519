@@ -31,6 +31,7 @@ class Artist
 
   def self.most_prolific
     #highest amount of paintings PER year of experience
+    
   end
 
   def create_painting(title, price, gallery)

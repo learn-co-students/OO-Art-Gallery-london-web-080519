@@ -17,5 +17,12 @@ class Gallery
     Painting.all.select {|painting| painting.gallery == self}
   end
 
-  
+  def artist_names
+    paintings.map {|painting| painting.artist.name }
+  end
+
+  def most_expensive_painting
+    paintings.max_by {|painting| painting.price }
+  end
+
 end
