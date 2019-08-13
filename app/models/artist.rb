@@ -31,7 +31,8 @@ class Artist
 
   def self.most_prolific
     #highest amount of paintings PER year of experience
-    
+    ## how many paintings the artist has made / how many years experience they have
+    self.all.map {|artist| artist.paintings.count }
   end
 
   def create_painting(title, price, gallery)
