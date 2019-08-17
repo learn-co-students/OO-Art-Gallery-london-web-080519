@@ -29,10 +29,11 @@ class Artist
     self.all.map{|artist| artist.years_experience}.reduce(:+)
   end
 
-  def self.most_prolific
+  def self.most_prolific  # THIS STILL TO FINISH
     #highest amount of paintings PER year of experience
-    ## how many paintings the artist has made / how many years experience they have
-    self.all.map {|artist| artist.paintings.count }
+    ## how many paintings each artist has made / how many years experience they have
+    find_artist = self.all.max_by {|artist| artist.paintings.count/artist.years_experience }
+    find_artist.name
   end
 
   def create_painting(title, price, gallery)
